@@ -6,6 +6,7 @@ Technically since I am reading the file into each of my solutions, lowest space 
 [Day Two](#day-two---gift-shop)
 [Day Three](#day-three---lobby)
 [Day Four](#day-four---printing-department)
+[Day Five](#day-five---cafeteria)
 
 ## Day One - Secret Entrance
 ### Part One
@@ -103,3 +104,11 @@ Doesn't look too bad, it looks like I'll just have to add a while loop to my par
 Runtime complexity is O(k * n * m), n and m being the rows and columns and k being total number of iterations needed. Since part one and two are the same code, I've actually increased part one's runtime complexity.
 
 Space complexity is the exact same as part one.
+## Day Five - Cafeteria
+### Part One
+Runtime complexity is a little confusing. I think realistically it's O(nlogn) because of the mergeRanges method utilizing the built-in sort() method. If not, it's more likely to just be O(k * m), k being the total number of ranges remaining and m being the total number of ingredient IDs.
+
+Space complexity is O(n), storing the entire file as two separate entities, one for the fresh food ranges and all the fresh food ids as separate lists.
+
+### Part Two
+Same runtime and space complexities as part one. Just added extra logic to sum all the differences of each fresh food interval.
