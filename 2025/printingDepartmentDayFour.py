@@ -43,6 +43,3 @@ def findTotalMovablePaperRoles(file: str) -> None:
 
 def isRoll(matrix: list[list[int]], m: int, n: int) -> bool:
     return True if matrix[m][n] in ["@", "x"] else False
-
-findTotalMovablePaperRoles("testInputs/printingDepartmentOne.txt")
-findTotalMovablePaperRoles("puzzleInputs/printingDepartment.txt")

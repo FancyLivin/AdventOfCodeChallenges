@@ -35,6 +35,3 @@ def passoversInRotation(start: int, rotation: str) -> int:
             return turn // 100
         else:
             return 0 if turn < start else (abs(start - turn) // 100) + 1
-
-countZeroes("testInputs/secretEntrance.txt")
-countZeroes("puzzleInputs/secretEntrance.txt")

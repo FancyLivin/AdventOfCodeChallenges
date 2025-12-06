@@ -43,6 +43,3 @@ def mergeRanges(ranges: list) -> list:
             end = max(merged[-1][1], interval[1])
             merged[-1] = [start, end]
     return merged
-
-findFreshIngredients("testInputs/cafeteriaOne.txt")
-findFreshIngredients("puzzleInputs/cafeteria.txt")

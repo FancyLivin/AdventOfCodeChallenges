@@ -48,7 +48,3 @@ def getMaxTwelveDigitPowerOfBank(power_bank: str) -> int:
             ptr +=1
     battery_max = int("".join(stack))
     return battery_max
-
-findTotalMaxPower("testInputs/lobbyTwo.txt")
-findTotalMaxPower("testInputs/lobbyOne.txt")
-findTotalMaxPower("puzzleInputs/lobby.txt")

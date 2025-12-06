@@ -42,7 +42,3 @@ def checkRangeForAllInvalidIDs(start: int, end: int) -> int:
                 rangeSum += int(num)
                 break
     return rangeSum
-
-sumAllInvalidIDs("testInputs/giftShopTwo.txt")
-sumAllInvalidIDs("testInputs/giftShopOne.txt")
-sumAllInvalidIDs("puzzleInputs/giftShop.txt")
