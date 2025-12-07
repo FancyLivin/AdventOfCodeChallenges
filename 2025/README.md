@@ -2,11 +2,12 @@
 Will be writing my thought process for each solution in this README file, along with runtime & space complexities.
 Technically since I am reading the file into each of my solutions, lowest space complexity will be O(n), but I'm pretending that it's an external input going forward for all problems. Will be linking to each day below.
 
-[Day One](#day-one---secret-entrance)
+[Day One](#day-one---secret-entrance) [Day Seven](#day-seven---laboratories)
 [Day Two](#day-two---gift-shop)
 [Day Three](#day-three---lobby)
 [Day Four](#day-four---printing-department)
 [Day Five](#day-five---cafeteria)
+[Day Six](#day-six---trash-compactor)
 
 ## Day One - Secret Entrance
 ### Part One
@@ -122,3 +123,12 @@ Took me a while to figure out how the problems were meant to be read, but now I 
 I can put the logic for both into the same for loop, but that will just cause so much confusion when reading so I'm just going to create a separate function and pass each parsed dataset into that.
 
 Both ended up having the same runtime and space complexities, I feel like I can significantly reduce the space complexity of both problems while maintaining same runtime, but can't think of a solution currently.
+## Day Seven - Laboratories
+### Part One
+I'll just be running a double for loop, checking if the index above the current is either ```S``` or ```|```. The logic for ```|``` will be to either rewrite the current index as ```|```, or rewrite the indicies to the left and right of current index as ```|``` if the current index is a splitter indicated by ```^```.
+
+Ended up iterating through the whole map in O(n * m) runtime.
+
+Space complexity is also O(1) for the logic of finding total number of splits. I've taken out the logic of modifying the file to fit my total split beam function. Now I'm only just storing the sum.
+### Part Two
+Unfortunately didn't figure it out fully on my own. Got the idea online to change all ```.``` values to 0, and then increment each index hit by a beam accordingly. The logic at least I figured out on my own, but since it utilizes the same methodology as part one, it has the same space and runtime complexity.
