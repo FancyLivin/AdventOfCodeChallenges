@@ -112,3 +112,13 @@ Space complexity is O(n), storing the entire file as two separate entities, one 
 
 ### Part Two
 Same runtime and space complexities as part one. Just added extra logic to sum all the differences of each fresh food interval.
+## Day Six - Trash Compactor
+### Part One
+I want to implement a way where the space complexity is the size of an individual math problem, but I'm not sure how to properly iterate through that without hardcoding individual rows.
+
+Solved in O(n * m) runtime and space complexity, both in relation to a 2D matrix. A little dissapointed in this solution, was hoping to figure out a way to reduce space complexity, but can't think of a way to do that while also utilizing a 2D array solution.
+### Part Two
+Took me a while to figure out how the problems were meant to be read, but now I get it thankfully. Although I'm not sure how I'll efficiently read through each problem with the new format.
+I can put the logic for both into the same for loop, but that will just cause so much confusion when reading so I'm just going to create a separate function and pass each parsed dataset into that.
+
+Both ended up having the same runtime and space complexities, I feel like I can significantly reduce the space complexity of both problems while maintaining same runtime, but can't think of a solution currently.
