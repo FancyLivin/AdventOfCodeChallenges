@@ -2,12 +2,14 @@
 Will be writing my thought process for each solution in this README file, along with runtime & space complexities.
 Technically since I am reading the file into each of my solutions, lowest space complexity will be O(n), but I'm pretending that it's an external input going forward for all problems. Will be linking to each day below.
 
-[Day One](#day-one---secret-entrance) [Day Seven](#day-seven---laboratories)
+[Day One](#day-one---secret-entrance)
 [Day Two](#day-two---gift-shop)
 [Day Three](#day-three---lobby)
 [Day Four](#day-four---printing-department)
 [Day Five](#day-five---cafeteria)
 [Day Six](#day-six---trash-compactor)
+[Day Seven](#day-seven---laboratories)
+[Day Eight](#day-eight---playground)
 
 ## Day One - Secret Entrance
 ### Part One
@@ -132,3 +134,14 @@ Ended up iterating through the whole map in O(n * m) runtime.
 Space complexity is also O(1) for the logic of finding total number of splits. I've taken out the logic of modifying the file to fit my total split beam function. Now I'm only just storing the sum.
 ### Part Two
 Unfortunately didn't figure it out fully on my own. Got the idea online to change all ```.``` values to 0, and then increment each index hit by a beam accordingly. The logic at least I figured out on my own, but since it utilizes the same methodology as part one, it has the same space and runtime complexity.
+## Day Eight - Playground
+### Part One
+Finally figured out how to implement the code for this part. The solution itself I ran in O(k * n^2) runtime, n being the total number of unique connections I iterate through, and k being the number of times I iterate through my while loop for the remaining merges. Space complexity I'm actually not too sure, all I know is that it's the total number of unique connections established.
+
+I unfortunately couldn't figure out why my code was malfunctioning for my full input vs the given input. Later found out that my non-disjoint merge solution missed a few edge cases and I had to add a while loop to the whole thing to find those remaining issues.
+### Part Two
+Found out online why my initial implementation was malfunctioning. I was trying to utilize data specifically for part one in part two, which would result in a lot of errors. Took me too long to learn that I needed to utilize the parsed data of the distance between each point that I stored in a dictionary.
+
+The solution itself worst-case for runtime is the same as the space complexity from part one. Space complexity is just O(n), n being the number of unique junction boxes.
+
+Not too proud of day 8's code, since for part two I basically copied someone else's solution after spending a couple hours wondering why my code wasn't working. Thankfully though I understand where the issue lay and why it works the way it does. Although part two I didn't figure it out on my own, the majority of part one I did, and that code also helped me to write the code for part two very cleanly, especially after I did my best to optimize my part one code.
