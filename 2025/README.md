@@ -10,6 +10,8 @@ Technically since I am reading the file into each of my solutions, lowest space 
 [Day Six](#day-six---trash-compactor)
 [Day Seven](#day-seven---laboratories)
 [Day Eight](#day-eight---playground)
+[Day Nine](#day-nine---movie-theater)
+[Day Ten](#day-ten---factory)
 
 ## Day One - Secret Entrance
 ### Part One
@@ -145,3 +147,21 @@ Found out online why my initial implementation was malfunctioning. I was trying 
 The solution itself worst-case for runtime is the same as the space complexity from part one. Space complexity is just O(n), n being the number of unique junction boxes.
 
 Not too proud of day 8's code, since for part two I basically copied someone else's solution after spending a couple hours wondering why my code wasn't working. Thankfully though I understand where the issue lay and why it works the way it does. Although part two I didn't figure it out on my own, the majority of part one I did, and that code also helped me to write the code for part two very cleanly, especially after I did my best to optimize my part one code.
+## Day Nine - Movie Theater
+### Part One
+My initial idea is to just do a double for loop and find the largest area through there.
+
+Runtime complexity is O(n^2), and space complexity is O(1).
+### Part Two
+Looks a lot more complex, will have to figure out how to map out total valid space. I did miss an important detail, the opposite corners of a valid rectangle must still be red, so I just need to figure out the logic of am I fully inside whenever I iterate through.
+
+Not too proud of this solution. I kept trying to understand the problem and figure out how to more efficiently fill the entire bounding box without creating 10 billion points. The solution to this was to use coordinate compression, but that went way over my head regardless of how much content I tried to consume on it. I think I fried my brain on that.
+
+Ended up using a method called AABB collision detection, but even that I couldnt wrap my head around on how to create it myself. Ended up looking at someone else's solution to that since that made a bit more sense than coordinate compression. I do now understand it after looking at their code and writing it myself, but it took me way too long to realize that for every possible area made by the red tiles, I had to check EVERY edge I previously created. The additional logic of making sure the x's and y's of both the area and the edge needing to be in ascending order also didn't help me when trying to figure it out myself. Hopefully I learned a bit by looking at all of the content I did, but I can't fully say for sure.
+
+Runtime complexity is O(n^3) since I iterate through each point twice, and then each edge in isIntersecting, which iterates through n total edges.
+
+Space complexity is O(n), for the total number of edges stored.
+## Day Ten - Factory
+### Part One
+Read the description, will be struggling quite a bit with this.
